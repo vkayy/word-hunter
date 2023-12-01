@@ -2,7 +2,7 @@
 
 this is a simple, terminal-based program that automates finding (almost) all the words in the imessage game 'word hunt'.
 
-note: i do not have access to the exact dictionary that gamepigeon use, so the generated words may not always be valid in-game.
+note: i say almost, as i do not have access to the exact dictionary that gamepigeon use, so the generated words may not always be valid in-game.
 
 ## instructions
 
