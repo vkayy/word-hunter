@@ -23,13 +23,13 @@ then, you have the following two options to download the files:
 click on the green 'code' button on this repo.
 
 
-<img width="335" alt="image" src="https://github.com/vkayy/word-hunter/assets/62311142/3f677cae-b8a6-4352-93d6-7bae332ab337">
+<img width="350" alt="image" src="https://github.com/vkayy/word-hunter/assets/62311142/3f677cae-b8a6-4352-93d6-7bae332ab337">
 
 
 then, click 'download zip'.
 
 
-<img width="388" alt="image" src="https://github.com/vkayy/word-hunter/assets/62311142/bc86b565-1f9e-4639-aeb3-97884b6a3d24">
+<img width="350" alt="image" src="https://github.com/vkayy/word-hunter/assets/62311142/bc86b565-1f9e-4639-aeb3-97884b6a3d24">
 
 
 then, unzip the folder locally, and the files should be downloaded.
@@ -62,7 +62,8 @@ you will be asked to input the size of the board, and the letters in the board.
 as an example, if this was your board,
 
 
-![image | 300](https://github.com/vkayy/word-hunter/assets/62311142/d5da26c1-c5f7-4b04-a5b9-42fb12792904)
+<img width="350" alt="image" src="https://github.com/vkayy/word-hunter/assets/62311142/17a98aaf-d592-4f0d-a334-8ab8b746e216">
+
 
 
 you would enter a size of `4`, and the letters `OATRIHPSHTNRENEI`.
