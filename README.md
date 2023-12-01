@@ -16,7 +16,7 @@ https://www.python.org/downloads/
 this will be necessary to run the program locally.
 
 
-### downloading
+### downloading the files
 
 
 to download the files, you have two options:
@@ -56,7 +56,7 @@ git clone https://github.com/vkayy/word-hunter.git
 this will create your own local repo with the same code as mine.
 
 
-### usage
+### using the program
 
 
 to run the program, you can simply right-click on it in your finder/file library and open it with the python launcher.
