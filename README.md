@@ -61,7 +61,9 @@ you will be asked to input the size of the board, and the letters in the board.
 
 as an example, if this was your board,
 
-<img width="388" alt="image" src="https://github.com/vkayy/word-hunter/assets/62311142/5f545954-ded8-4869-95f2-a034562f8bb8">
+
+![image](https://github.com/vkayy/word-hunter/assets/62311142/d5da26c1-c5f7-4b04-a5b9-42fb12792904)
+
 
 you would enter a size of `4`, and the letters `OATRIHPSHTNRENEI`.
 
