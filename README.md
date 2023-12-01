@@ -2,7 +2,7 @@
 
 this is a simple, terminal-based program that automates finding (almost) all the words in the imessage game 'word hunt'.
 
-note that i say almost as i do not have access to the exact dictionary that gamepigeon use to validate words.
+note: i do not have access to the exact dictionary that gamepigeon use, so the generated words may not always be valid in-game.
 
 ## instructions
 
@@ -72,6 +72,27 @@ following this, you will have a basic display of your board output, followed by 
 
 then, you will be prompted to either quit or enter another board.
 
+note: as mentioned earlier, some generated words may not be valid in-game, and some words may be missing. feel free to add or remove words from the dictionary text file as you please, but ensure that the same format, e.g.:
+
+```
+cheese
+burger
+python
+```
+
+rather than:
+
+```
+cheese, burger, python
+```
+
+or:
+
+```
+cheese,
+burger,
+python,
+```
 
 ## languages, frameworks and libraries used
 
