@@ -1,16 +1,22 @@
+import os, math
+import sys
 from typing import List
 from itertools import groupby
-import os, math
 
 
-def toBoard(letters: str) -> List[List[str]]:
+def toBoard(letters: str, boardSize: int) -> List[List[str]]:
     board = []
-    for i in range(0, len(letters), 4):
-        board.append(list(letters[i:i + 4]))
+    for i in range(0, len(letters), boardSize):
+        board.append(list(letters[i:i + boardSize]))
+    
+    print("\n")
+    for row in board:
+        print("".join(" " * (11 - boardSize)) + "  ".join([letter.upper() for letter in row]))
+        print()
     return board
 
 
-def findWords(board: List[List[str]], words: List[str]) -> List[str]:
+def findWords(board: List[List[str]], words: List[str], boardSize: int) -> List[str]:
     
     wordKey = "$"
     root = {}
@@ -36,7 +42,7 @@ def findWords(board: List[List[str]], words: List[str]) -> List[str]:
             parent.pop(ch)
     
     for word in words:
-        if len(word) < 4 or len(word) > 15:
+        if len(word) < 3 or len(word) > (boardSize ** 2):
             continue
         node = root
         for ch in word:
@@ -60,15 +66,17 @@ def readFromFile(file_path: str) -> List[str]:
     return words
 
 
-def beatElena(input: str):
-    board = toBoard(input)
-    foundWords = findWords(board, dictionary)
+def winGame(boardString: str, boardSize: int):
+    board = toBoard(boardString, boardSize)
+    foundWords = findWords(board, dictionary, boardSize)
     groupedWords = [list(group) for _, group in groupby(sorted(foundWords, key=len), len)]
     
     print()
     
     if not groupedWords:
-        print("couldn't find any words; you prolly made a typo.")
+        print("couldn't find any words; you probably made a typo.\n")
+        
+        main()
         
     else:
         for group in groupedWords:
@@ -76,13 +84,57 @@ def beatElena(input: str):
                 letters = len(group[0])
                 print(f"----- {letters} letter words -----\n")
                 for word in group:
-                    print(''.join([" "] * math.floor((26 - letters) / 2)) + word) 
+                    print(''.join([" "] * math.floor((26 - letters) / 2)) + word.upper()) 
                 print()
 
+scriptDir = os.path.dirname(os.path.realpath(sys.argv[0]))
+dictionaryFilePath = os.path.join(scriptDir, "dictionary.txt")
+dictionary = readFromFile(dictionaryFilePath)
 
-dictionary = readFromFile(os.environ["DICTIONARY_FILE"])
+def main():
+    
+    boardSize = input("\nenter the no. of rows/columns (1-10), or q to exit: ").lower()
+    
+    if boardSize == "q":
+        print()
+        exit()
+    
+    while not boardSize.isdigit() or int(boardSize) < 1 or int(boardSize) > 10:
+        print("\nthe board size must be a number between 1 and 10. try again.")
+        
+        boardSize = input("\nenter the no. of rows/columns (1-10), or q to exit: ").lower()
+        
+        if boardSize == "q":
+            print()
+            exit()
+    
+    boardSize = int(boardSize)
+    letterCount = boardSize ** 2
+        
+    boardString = input("\nenter the board letters (row by row, left to right), or q to exit: ").lower()
 
-boardString = input("enter the board: ")
+    if boardString == "q":
+        print()
+        exit()
 
-beatElena(boardString)
+    while len(boardString) != letterCount or not boardString.isalpha():
+        print(f"\nthe board must be {letterCount} characters long and contain only letters. try again.")
+        
+        boardString = input("\nenter the board: ").lower()
+        
+        if boardString == "q":
+            print()
+            exit()
+
+    winGame(boardString, boardSize)
+    
+    done = input("enter any character to play again, or q to exit: ").lower()
+    
+    if done == "q":
+        print()
+        exit()
+    
+    main()
+
+main()
 
