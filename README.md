@@ -8,25 +8,36 @@ note that i say almost as i do not have access to the exact dictionary that game
 
 ### prerequisites
 
+
 first, if you haven't installed python3 before, do so at this link:
 
 https://www.python.org/downloads/
 
+this will be necessary to run the program locally.
+
+
 ### downloading
 
-to download the files, you have two options.
+
+to download the files, you have two options:
+
 
 1. download zip (recommended)
 
-click on the green '<> code' button on this repo, an click 'download zip archive'.
+
+click on the green 'code' button on this repo.
 
 <img width="335" alt="image" src="https://github.com/vkayy/word-hunter/assets/62311142/3f677cae-b8a6-4352-93d6-7bae332ab337">
+
+then, click 'download zip'.
 
 <img width="388" alt="image" src="https://github.com/vkayy/word-hunter/assets/62311142/bc86b565-1f9e-4639-aeb3-97884b6a3d24">
 
 then, simply unzip the folder, and the files should be downloaded locally.
 
+
 2. clone repo with git (can be faster)
+
 
 if you haven't installed git, do so at this link:
 
@@ -40,11 +51,14 @@ git clone https://github.com/vkayy/word-hunter.git
 
 this will create your own local repo with the same code as mine.
 
+
 ### usage
+
 
 to run the program, you can simply right-click on it in your finder/file library and open it with the python launcher.
 
 you will be asked to input the size of the board, and the letters in the board.
+
 
 as an example, if this was your board,
 
@@ -54,9 +68,11 @@ you would enter a size of `4`, and the letters `OATRIHPSHTNRENEI`.
 
 note that the letter input is case-insensitive, so you could also enter `oaTrIhPsHtnReNei` (but why?).
 
+
 following this, you will have a basic display of your board output, followed by the possible words in ascending length.
 
 then, you will be prompted to either quit or enter another board.
+
 
 ## languages, frameworks and libraries used
 
