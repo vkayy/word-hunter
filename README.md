@@ -22,21 +22,25 @@ this will be necessary to run the program locally.
 to download the files, you have two options:
 
 
-1. download zip (recommended)
+### 1. download zip (recommended)
 
 
 click on the green 'code' button on this repo.
 
+
 <img width="335" alt="image" src="https://github.com/vkayy/word-hunter/assets/62311142/3f677cae-b8a6-4352-93d6-7bae332ab337">
+
 
 then, click 'download zip'.
 
+
 <img width="388" alt="image" src="https://github.com/vkayy/word-hunter/assets/62311142/bc86b565-1f9e-4639-aeb3-97884b6a3d24">
 
-then, simply unzip the folder, and the files should be downloaded locally.
+
+then, unzip the folder locally, and the files should be downloaded.
 
 
-2. clone repo with git (can be faster)
+### 2. clone repo with git (can be faster)
 
 
 if you haven't installed git, do so at this link:
