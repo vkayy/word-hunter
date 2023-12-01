@@ -6,7 +6,7 @@ note that i say almost as i do not have access to the exact dictionary that game
 
 ## instructions
 
-### prerequisites
+## prerequisites
 
 
 first, if you haven't installed python3 before, do so at this link:
@@ -15,14 +15,9 @@ https://www.python.org/downloads/
 
 this will be necessary to run the program locally.
 
+then, you have the following two options to download the files:
 
-### downloading the files
-
-
-to download the files, you have two options:
-
-
-### 1. download zip (recommended)
+## 1. download zip (recommended)
 
 
 click on the green 'code' button on this repo.
@@ -40,7 +35,7 @@ then, click 'download zip'.
 then, unzip the folder locally, and the files should be downloaded.
 
 
-### 2. clone repo with git (can be faster)
+## 2. clone repo with git (can be faster)
 
 
 if you haven't installed git, do so at this link:
@@ -56,7 +51,7 @@ git clone https://github.com/vkayy/word-hunter.git
 this will create your own local repo with the same code as mine.
 
 
-### using the program
+## using the program
 
 
 to run the program, you can simply right-click on it in your finder/file library and open it with the python launcher.
