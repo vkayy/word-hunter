@@ -1,5 +1,4 @@
-import os, math
-import sys
+import os, sys, math
 from typing import List
 from itertools import groupby
 
@@ -60,12 +59,6 @@ def findWords(board: List[List[str]], words: List[str], boardSize: int) -> List[
     return matches
 
 
-def readFromFile(file_path: str) -> List[str]:
-    with open(file_path, 'r') as file:
-        words = file.read().splitlines()
-    return words
-
-
 def winGame(boardString: str, boardSize: int):
     board = toBoard(boardString, boardSize)
     foundWords = findWords(board, dictionary, boardSize)
@@ -86,6 +79,11 @@ def winGame(boardString: str, boardSize: int):
                 for word in group:
                     print(''.join([" "] * math.floor((26 - letters) / 2)) + word.upper()) 
                 print()
+
+def readFromFile(file_path: str) -> List[str]:
+    with open(file_path, 'r') as file:
+        words = file.read().splitlines()
+    return words
 
 scriptDir = os.path.dirname(os.path.realpath(sys.argv[0]))
 dictionaryFilePath = os.path.join(scriptDir, "dictionary.txt")
