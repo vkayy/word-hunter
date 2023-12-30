@@ -10,7 +10,7 @@ def toBoard(letters: str, boardSize: int) -> List[List[str]]:
     
     print("\n")
     for row in board:
-        print("".join(" " * (11 - boardSize)) + "  ".join([letter.upper() for letter in row]))
+        print("".join(" " * (11 - boardSize)) + "  ".join([letter.upper() if letter.isalpha() else ' ' for letter in row]))
         print()
     return board
 
@@ -22,7 +22,7 @@ def findWords(board: List[List[str]], words: List[str], boardSize: int) -> List[
     
     def dfs(r, c, parent):
         ch = board[r][c]
-        board[r][c] = "#"
+        board[r][c] = "."
         child = parent[ch]
         
         if word := child.pop(wordKey, False):
@@ -109,13 +109,13 @@ def main():
     boardSize = int(boardSize)
     letterCount = boardSize ** 2
         
-    boardString = input("\nenter the board letters (row by row, left to right), or q to exit: ").lower()
+    boardString = input("\nenter the board letters with a period for gaps (row by row, left to right), or q to exit: ").lower()
 
     if boardString == "q":
         print()
         exit()
 
-    while len(boardString) != letterCount or not boardString.isalpha():
+    while len(boardString) != letterCount or not all(ch.isalpha() or ch == '.' for ch in boardString):
         print(f"\nthe board must be {letterCount} characters long and contain only letters. try again.")
         
         boardString = input("\nenter the board: ").lower()
