@@ -105,4 +105,4 @@ python,
 
 ## motives
 
-my girlfriend and i are very competitive with word hunt (although, i beat her all the time), and this is the harvest of that situation.
+my girlfriend and i are very competitive with word hunt (although, i beat her all the time).
